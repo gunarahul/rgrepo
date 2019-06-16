@@ -1,0 +1,7 @@
+Run from agent command line:
+
+java -jar agent.jar -jnlpUrl http://localhost:8080/computer/slave1/slave-agent.jnlp -secret bd73e5cdfb7bbff3c7c3dc014c52c07aa1605c394418c210aefc9c82780340dd -workDir "/var/lib/jenkins/"
+Run from agent command line, with the secret stored in a file:
+
+echo bd73e5cdfb7bbff3c7c3dc014c52c07aa1605c394418c210aefc9c82780340dd > secret-file
+java -jar agent.jar -jnlpUrl http://localhost:8080/computer/slave1/slave-agent.jnlp -secret @secret-file -workDir "/var/lib/jenkins/"
